@@ -61,25 +61,50 @@
   // Fuction converts upper case letters to lower case, and lower case letters to upper case
 
 
-  function swapcase(str) {
-    if (typeof (str) === 'string' && str.constructor === String) {
-      let arr = str.trim().split('');
-      let output = '';
-      let i;
-      let len = arr.length;
+  // function swapcase(str) {
+  //   if (typeof (str) === 'string' && str.constructor === String) {
+  //     let arr = str.trim().split('');
+  //     let output = '';
+  //     let i;
+  //     let len = arr.length;
 
-      for (i = 0; i < len; i++) {
-        if (arr[i] === arr[i].toLowerCase()) {
-          output += arr[i].toUpperCase();
-        } else {
-          output += arr[i].toLowerCase();
-        }
-      }
-      return output;
+  //     for (i = 0; i < len; i++) {
+  //       if (arr[i] === arr[i].toLowerCase()) {
+  //         output += arr[i].toUpperCase();
+  //       } else {
+  //         output += arr[i].toLowerCase();
+  //       }
+  //     }
+  //     return output;
+  //   }
+  // }
+
+  // console.log(swapcase('nIKOLA kOVACEVIC'));
+
+
+
+
+
+
+
+  // Get unique guid of max 32 char
+
+  function guid(len) {
+    let arr = [];
+    let char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let charlen = char.length;
+    let length = len || 32;
+
+    for (let i = 0; i < length; i++) {
+      arr[i] = char.charAt(Math.floor(Math.random() * charlen));
     }
+
+    return arr.join('');
+
+
   }
 
-  console.log(swapcase('nIKOLA kOVACEVIC'));
+  console.log(guid(15));
 
 
 
