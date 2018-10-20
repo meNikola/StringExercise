@@ -14,7 +14,10 @@
 </body>
 
 <script>
-//Function to parameterize a string
+
+
+  //Function to parameterize a string
+
   // function paramString(str) {
   //   let arr = str.trim().split(' ');
   //   let output = '';
@@ -26,6 +29,38 @@
   // }
 
   // console.log(paramString('Nikola Kovacevic From Serbia'));
+
+
+
+
+  // Capitalize first letter of a string
+
+  function capitalize(str) {
+    if (typeof (str) === 'string') {
+      let arr = str.trim().split('');
+      let output = '';
+
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === arr[0]) {
+          output += arr[i].toUpperCase();
+        } else {
+          output += arr[i].toLowerCase();
+        }
+      }
+      return output;
+    }
+  }
+
+  console.log(capitalize('nikola is a programer'));
+
+
+
+
+
+
+
+
+
 
 </script>
 
