@@ -89,22 +89,43 @@
 
   // Get unique guid of max 32 char
 
-  function guid(len) {
-    let arr = [];
-    let char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let charlen = char.length;
-    let length = len || 32;
+  // function guid(len) {
+  //   let arr = [];
+  //   let char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  //   let charlen = char.length;
+  //   let length = len || 32;
 
-    for (let i = 0; i < length; i++) {
-      arr[i] = char.charAt(Math.floor(Math.random() * charlen));
+  //   for (let i = 0; i < length; i++) {
+  //     arr[i] = char.charAt(Math.floor(Math.random() * charlen));
+  //   }
+
+  //   return arr.join('');
+
+
+  // }
+
+  // console.log(guid());
+
+
+
+
+
+
+
+  // Camelcase function
+  function camelcase(str) {
+    if (typeof (str) === 'string') {
+      let arr = str.trim().split(' ');
+      let output = [];
+      for (let i = 0; i < arr.length; i++) {
+        output[i] = arr[i].replace(arr[i].charAt(0), arr[i].charAt(0).toUpperCase());
+      }
+      return output.join('');
     }
-
-    return arr.join('');
-
 
   }
 
-  console.log(guid(15));
+  console.log(camelcase('NikolaKovacaevic javaScript Programer'));
 
 
 
